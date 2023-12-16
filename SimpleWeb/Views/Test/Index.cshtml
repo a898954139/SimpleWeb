@@ -1,0 +1,21 @@
+@using SimpleWeb.Controllers
+
+@{
+    var appSettings = ViewBag.AppSettings
+        as AppSettingsModel;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <div>@appSettings.Id</div>
+    <div>@appSettings.Name</div>
+    <div>@appSettings.IsTest</div>
+</div>
+</body>
+</html>
