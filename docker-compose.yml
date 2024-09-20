@@ -16,3 +16,21 @@
       dockerfile: Seq/Dockerfile
     ports:
       - "8081:80"
+
+  SimpleWeb.Jeager:
+    image: jeager
+    build:
+      context: .
+      dockerfile: Jeager/Dockerfile
+
+  masstransit:
+    image: masstransit
+    build:
+      context: .
+      dockerfile: MassTransit/Dockerfile
+
+  masstransitimp:
+    image: masstransitimp
+    build:
+      context: .
+      dockerfile: MassTransitImp/Dockerfile
