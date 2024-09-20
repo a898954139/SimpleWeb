@@ -1,0 +1,18 @@
+﻿services:
+  SimpleWeb.Seq:
+    image: datalust/seq:latest
+    container_name: SimpleWeb.Seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5341:5341"
+      - "8080:80"
+
+  SimpleWeb.Seq.WebApi:
+    image: seq.webapi
+    container_name: SimpleWeb.Seq.WebApi
+    build:
+      context: .
+      dockerfile: Seq/Dockerfile
+    ports:
+      - "8081:80"
